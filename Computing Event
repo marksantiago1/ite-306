@@ -1,0 +1,14 @@
+RatePerday = 15000
+SoundSystemFee = 4500
+StageDecorFee = 3000
+CateringFee = 35000
+EVAT = .12
+
+NumberOfDays = int(input("Enter The Number of Day/s: "))
+
+Amount = RatePerday * NumberOfDays
+TotalAmount = Amount + SoundSystemFee + StageDecorFee + CateringFee
+Tax = TotalAmount * EVAT
+Bill = TotalAmount + Tax
+
+print(Bill)
