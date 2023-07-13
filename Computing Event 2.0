@@ -1,0 +1,19 @@
+#Rate Per Day
+RatePerday = 15000
+#Sound System Fee
+SoundSystemFee = 4500
+#Stage Decor Fee
+StageDecorFee = 3000
+#Catering Fee
+CateringFee = 35000
+#Expanded Value Tax
+EVAT = .12
+#Ask the user to Enter The Number of Day/s
+NumberOfDays = int(input("Enter The Number of Day/s: "))
+#Formula
+Amount = RatePerday * NumberOfDays
+TotalAmount = Amount + SoundSystemFee + StageDecorFee + CateringFee
+Tax = TotalAmount * EVAT
+Bill = TotalAmount + Tax
+
+print(Bill)
