@@ -11,4 +11,3 @@ class encrpyt:
 ob = encrpyt()
 word = str(input("Enter a message to encrypt: "))
 print(("Encrypted message: " + ob.solve(word, 3)))
-print(ob.solve("Hello World", 3))
