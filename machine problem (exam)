@@ -1,0 +1,16 @@
+prelim_grade = int(input("Enter Prelim Grade: "))
+midterm_grade = int(input("Enter Midterm Grade: "))
+final_grade = int(input("Enter Final Grade: "))
+
+if 1 <= prelim_grade <= 100 and 1 <= midterm_grade <= 100 and 1 <= final_grade <= 100:
+    average_grade = prelim_grade * 0.3 + midterm_grade * 0.33 + final_grade * 0.34
+
+    if average_grade >= 50:
+        print("The result: ", average_grade)
+        print("PASSED")
+    else:
+        print("The result: ", average_grade)
+        print("FAILED")
+
+else:
+    print("WARNING: The program does not accepting grades less than 1 and greater than 100")
