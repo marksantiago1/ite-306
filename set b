@@ -1,0 +1,39 @@
+students = []
+
+while True:
+    print("\nMenu:")
+    print("1. Add Student")
+    print("2. Update Course")
+    print("3. List Students")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        name = input("Enter student's name: ")
+        course = input("Enter student's course: ")
+        student = {"Name": name, "Course": course}
+        students.append(student)
+        print("Student added.")
+    elif choice == "2":
+        name = input("Enter student's name to update course: ")
+        for student in students:
+            if student["Name"] == name:
+                new_course = input("Enter new course: ")
+                student["Course"] = new_course
+                print("Course updated.")
+                break
+        else:
+            print("Student not found.")
+    elif choice == "3":
+        if students:
+            print("List of Students:")
+            for student in students:
+                print(f"Name: {student['Name']}, Course: {student['Course']}")
+        else:
+            print("No students in the list.")
+    elif choice == "4":
+        print("Exiting the program.")
+        break
+    else:
+        print("Invalid choice. Please select a valid option.")
