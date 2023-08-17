@@ -1,0 +1,33 @@
+# Initialize an empty dictionary to store student information
+student = {
+    "Name": "",
+    "Course": ""
+}
+
+# Main loop
+while True:
+    print("Menu:")
+    print("1. Add Student")
+    print("2. View Student")
+    print("3. Exit")
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        student["Name"] = input("Enter student name: ")
+        student["Course"] = input("Enter student course: ")
+        print("Student information added!")
+
+    elif choice == "2":
+        if student["Name"] == "":
+            print("No student information available.")
+        else:
+            print("Student Name:", student["Name"])
+            print("Student Course:", student["Course"])
+
+    elif choice == "3":
+        print("Exiting the program.")
+        break
+
+    else:
+        print("Invalid choice. Please select a valid option.")
+        
